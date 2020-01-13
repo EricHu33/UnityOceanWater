@@ -10,8 +10,8 @@ Study some basic technics to create a ocean with surface shader
 Function Implementations:
 ---------
 
- - Refractiony 
- - Water color blends base On depth and wave height
+ - Refractiony
+ - Water color blends base on depth and wave height
  - Frensel effect
  - Skybox reflection
 

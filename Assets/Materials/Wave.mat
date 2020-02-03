@@ -82,6 +82,7 @@ Material:
     - _DepthMaxDistance: 11.2
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _EmissionFactor: 0.37
     - _EnableFoam: 1
     - _FogFactor: 1
     - _FrenselFactor: 0.217

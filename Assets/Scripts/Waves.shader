@@ -27,7 +27,10 @@ Shader "Custom/Waves"
         _FoamNoiseProperty("Noise Property(DirX, DirY, Max, Min)", Vector) = (0,0,1,0)
         [Toggle] _EnableFoam("Enable Foam", Float) = 1
         _debugDepth("_debugDepth factor", Range(0, 15)) = 0
+        _EmissionFactor("Emission factor", Range(0, 1)) = 0
         _FrenselFactor("Frensel factor", Range(0, 1)) = 0
+        [Toggle] _EnableReflection("Enable Reflection", Float) = 1
+        _ReflectionFactor("Reflection factor", Range(0, 1)) = 0
     }
     SubShader
     {
@@ -51,6 +54,7 @@ Shader "Custom/Waves"
         // Use shader model 3.0 target, to get nicer looking lighting
         #pragma target 3.0
         #pragma shader_feature _ENABLEFOAM_ON
+        #pragma shader_feature _ENABLEREFLECTION_ON
         #include "Tessellation.cginc"
 
         sampler2D _MainTex;
@@ -59,6 +63,7 @@ Shader "Custom/Waves"
         sampler2D _RefractionTex;
         sampler2D _FoamTex;
         sampler2D _BumpTex;
+        sampler2D _ReflectionTex;
 
         float4 _BumpTex_ST;
         float4 _FoamTex_ST;
@@ -100,6 +105,8 @@ Shader "Custom/Waves"
         float4 _BumpAngle;
         float _FrenselFactor;
         float4 _FoamColor;
+        float _EmissionFactor;
+        float _ReflectionFactor;
 
         float4 _CameraDepthTexture_TexelSize;
 
@@ -221,6 +228,10 @@ Shader "Custom/Waves"
             //final color
             underWaterColor = saturate(underWaterColor * _Color);
             surfaceWaterColor = lerp(surfaceWaterColor, specReflColor*0.8, saturate(reflectFactor));
+            #if _ENABLEREFLECTION_ON
+                fixed4 reflColor = tex2D(_ReflectionTex, IN.screenPos.xy / IN.screenPos.w);
+                surfaceWaterColor = lerp(surfaceWaterColor, reflColor, saturate(_ReflectionFactor-height01));
+            #endif
             float surfacePercent = saturate(reflectFactor + _FrenselFactor);
             float4 finalColor =  surfaceWaterColor * surfacePercent + underWaterColor * (1 - surfacePercent);
             //final color end
@@ -247,6 +258,8 @@ Shader "Custom/Waves"
             o.Metallic = _Metallic;
             o.Smoothness = _Glossiness * foamDiff;
             o.Alpha =1;
+            o.Emission = reflData.rgb * _EmissionFactor;
+            //o.Alpha = reflData.a;
         }
         ENDCG
     }

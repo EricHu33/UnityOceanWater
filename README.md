@@ -7,6 +7,9 @@ Study some basic technics to create a ocean with surface shader
 
 <img width="540" alt="result" src="https://user-images.githubusercontent.com/13420668/72254010-d7d22580-363d-11ea-9367-41b489d7176f.png">
 
+
+<img width="540" alt="result" src="https://user-images.githubusercontent.com/13420668/73698642-b1734780-471c-11ea-9b13-4cae1433dc49.gif">
+
 Function Implementations:
 ---------
 
@@ -14,10 +17,10 @@ Function Implementations:
  - Water color blends base on depth and wave height
  - Frensel effect
  - Skybox reflection
+ - Real time scene reflection (Planar Reflection)
 
 TODO
 ---------
- - Real time scene reflection
  - Sun glitter
  - Underwater effect.
 
@@ -29,3 +32,7 @@ References
 [Waves - catlikecoding.com](https://catlikecoding.com/unity/tutorials/flow/waves/)
 
 [crest - Crest Ocean System](https://github.com/crest-ocean/crest)
+
+[Cg Programming/Unity/Water Reflection and Refraction](https://en.wikibooks.org/wiki/Cg_Programming/Unity/Water_Reflection_and_Refraction)
+
+[Unity Shader-反射效果（CubeMap，Reflection Probe，Planar Reflection，Screen Space Reflection)](https://blog.csdn.net/puppet_master/article/details/80808486)

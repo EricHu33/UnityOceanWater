@@ -227,10 +227,10 @@ Shader "Custom/Waves"
 
             //final color
             underWaterColor = saturate(underWaterColor * _Color);
-            surfaceWaterColor = lerp(surfaceWaterColor, specReflColor*0.8, saturate(reflectFactor));
+            //surfaceWaterColor = lerp(surfaceWaterColor, specReflColor*0.8, saturate(reflectFactor));
             #if _ENABLEREFLECTION_ON
                 fixed4 reflColor = tex2D(_ReflectionTex, ((IN.screenPos.xy+o.Normal.xz) / IN.screenPos.w));
-                surfaceWaterColor = lerp(surfaceWaterColor, reflColor, saturate(_ReflectionFactor-height01));
+                surfaceWaterColor = lerp(surfaceWaterColor, reflColor, saturate(reflectFactor+_ReflectionFactor - height01));
             #endif
             float surfacePercent = saturate(reflectFactor + _FrenselFactor);
             float4 finalColor =  surfaceWaterColor * surfacePercent + underWaterColor * (1 - surfacePercent);

@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Wave
-  m_Shader: {fileID: 4800000, guid: 332f80b4a7a6940929741c8c6ef00728, type: 3}
-  m_ShaderKeywords: _ENABLEFOAM_ON _ENABLEREFLECTION_ON
+  m_Name: BLUE
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -22,10 +22,6 @@ Material:
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _BumpTex:
-        m_Texture: {fileID: 2800000, guid: 5a79ff16ef94e42d3b5000a7f8d8ab66, type: 3}
-        m_Scale: {x: 0.2, y: 0.5}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
         m_Texture: {fileID: 0}
@@ -43,14 +39,6 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _FoamNoise:
-        m_Texture: {fileID: 2800000, guid: fc132dd847313450cb3316fbbee75221, type: 3}
-        m_Scale: {x: 0.05, y: 0.05}
-        m_Offset: {x: 0, y: 0}
-    - _FoamTex:
-        m_Texture: {fileID: 2800000, guid: fc132dd847313450cb3316fbbee75221, type: 3}
-        m_Scale: {x: 0.1, y: 0.1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -58,10 +46,6 @@ Material:
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Noise:
-        m_Texture: {fileID: 2800000, guid: 2311fb1332243486b885fc9cefe7d524, type: 3}
-        m_Scale: {x: 0.1, y: 0.01}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
@@ -71,47 +55,23 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _RefractionTex:
-        m_Texture: {fileID: 2800000, guid: 9d9e2172df0d049fda83b5a52bfb4045, type: 3}
-        m_Scale: {x: 0.1, y: 0.1}
-        m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
-    - _DeepArea: 0.28
-    - _DepthMaxDistance: 9.3
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _EmissionFactor: 0.37
-    - _EnableFoam: 1
-    - _EnableReflection: 1
-    - _FogFactor: 1
-    - _FrenselFactor: 0.217
     - _GlossMapScale: 1
-    - _Glossiness: 0
+    - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _ReflectionFactor: 0.396
-    - _RefractionFactor: 1.92
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Tess: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - _debugDepth: 1.9
     m_Colors:
-    - _BumpAngle: {r: 1, g: 0, b: 0, a: 1}
-    - _Color: {r: 0.63403344, g: 0.845332, b: 0.9811321, a: 1}
-    - _DeepWaterColor: {r: 0, g: 0.20867963, b: 0.3018868, a: 1}
+    - _Color: {r: 0, g: 0.5955162, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FoamColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
-    - _FoamNoiseProperty: {r: 0.2, g: 0.2, b: 0, a: 0.76}
-    - _FoamProperties: {r: -0.05, g: -0.05, b: 0.47, a: 0.27}
-    - _NoiseProperty: {r: 1, g: 0, b: 0, a: 0}
-    - _WaveA: {r: 1, g: 1, b: 0.4, a: 19}
-    - _WaveB: {r: 0, g: 1, b: 0, a: 7}
-    - _WaveC: {r: 0.58, g: 1, b: 0, a: 15}

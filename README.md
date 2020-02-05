@@ -8,7 +8,7 @@ Study some basic technics to create a ocean with surface shader
 <img width="540" alt="result" src="https://user-images.githubusercontent.com/13420668/72254010-d7d22580-363d-11ea-9367-41b489d7176f.png">
 
 
-<img width="540" alt="result" src="https://user-images.githubusercontent.com/13420668/73698642-b1734780-471c-11ea-9b13-4cae1433dc49.gif">
+<img width="540" alt="result" src="https://user-images.githubusercontent.com/13420668/73801697-3bdbaa00-47f6-11ea-9e93-71a61a9e10e0.gif">
 
 Function Implementations:
 ---------
